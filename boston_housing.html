@@ -12181,7 +12181,6 @@ Standard deviation of prices: $165,171.13
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
 You want to understand how well your learning algorithm performs on unseen data, so it makes sense to hold out some data as a testing subset. After you train your model, you can see how it performs on the unseen testing subset.</p>
-<p>If we use all or too much of the data as training data, we are more likely to overfit. If we use too little training data, then our model hasn't seen enough examples to generalize, and is likely to underfit.</p>
 
 </div>
 </div>
@@ -14711,8 +14710,8 @@ When the model is trained with a maximum depth of 1, the model suffers from high
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-If we did a single train/test split, it's possible that we might get strange results just based on the way we split our data. For instance, perhaps the test data 
-Compared to doing a single K-fold cross-validation is a way for us to train our model on multiple train/test splits. By using multiple/train test splits, we reduce variation that would be caused by randomly splitting data.</p>
+If we did a single train/test split, it's possible that we might get strange results just based on the way we split our data. For instance, perhaps the test data turns out not to be representative of the entire dataset well. We might think our model didn't work well, but actually the problem was with how we split the data. A way to fix this is to run more train/test splits!</p>
+<p>K-fold cross-validation is a way for us to train our model on multiple train/test splits. By using multiple/train test splits, we reduce variation that would be caused by randomly splitting data.</p>
 <p>'k' specifies a number of folds, i.e. sets of test data.</p>
 <p><strong>Example: 5-fold cross validation with 100 datapoints.</strong>
 In this example, k is 5. We would train our model and test it five times. Each test fold would consist of 20 points and 80 training points.</p>
